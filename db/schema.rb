@@ -10,14 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_153959) do
+ActiveRecord::Schema.define(version: 2019_02_12_215448) do
 
   create_table "guides", force: :cascade do |t|
     t.string "character"
     t.string "specie"
+    t.string "quote"
+    t.integer "planet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["planet_id"], name: "index_guides_on_planet_id"
+  end
+
+  create_table "planets", force: :cascade do |t|
     t.string "planet"
     t.string "location"
-    t.string "quote"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -3,9 +3,8 @@ class CreateGuides < ActiveRecord::Migration[5.2]
     create_table :guides do |t|
       t.string :character
       t.string :specie
-      t.string :planet
-      t.string :location
       t.string :quote
+      t.references :planet, foreign_key: true
 
       t.timestamps
     end

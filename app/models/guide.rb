@@ -1,3 +1,3 @@
 class Guide < ApplicationRecord
-  validates :character, :specie, presence: true
+  belongs_to :planet
 end

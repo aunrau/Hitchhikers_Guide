@@ -15,8 +15,7 @@ class GuidesTest < ApplicationSystemTestCase
     click_on "New Guide"
 
     fill_in "Character", with: @guide.character
-    fill_in "Location", with: @guide.location
-    fill_in "Planet", with: @guide.planet
+    fill_in "Planet", with: @guide.planet_id
     fill_in "Quote", with: @guide.quote
     fill_in "Specie", with: @guide.specie
     click_on "Create Guide"
@@ -30,8 +29,7 @@ class GuidesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Character", with: @guide.character
-    fill_in "Location", with: @guide.location
-    fill_in "Planet", with: @guide.planet
+    fill_in "Planet", with: @guide.planet_id
     fill_in "Quote", with: @guide.quote
     fill_in "Specie", with: @guide.specie
     click_on "Update Guide"

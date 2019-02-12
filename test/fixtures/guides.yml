@@ -3,13 +3,11 @@
 one:
   character: MyString
   specie: MyString
-  planet: MyString
-  location: MyString
   quote: MyString
+  planet: one
 
 two:
   character: MyString
   specie: MyString
-  planet: MyString
-  location: MyString
   quote: MyString
+  planet: two
