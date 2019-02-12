@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Character:</strong>
+  <%= @guide.character %>
+</p>
+
+<p>
+  <strong>Specie:</strong>
+  <%= @guide.specie %>
+</p>
+
+<p>
+  <strong>Planet:</strong>
+  <%= @guide.planet %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @guide.location %>
+</p>
+
+<p>
+  <strong>Quote:</strong>
+  <%= @guide.quote %>
+</p>
+
+<%= link_to 'Edit', edit_guide_path(@guide) %> |
+<%= link_to 'Back', guides_path %>
