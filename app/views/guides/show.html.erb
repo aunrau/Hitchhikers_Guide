@@ -17,12 +17,13 @@
 
 <p>
   <strong>Planet:</strong>
-  <%# <% if @planets.count > 0 %>
-  <% @guide.planet.planet.each do |planet| %>
-    <%= link_to planet.planet, planet %>
+  <% if @planets.count > 0 %>
+    <% @guide.planet.planet.each do |planet| %>
+      <%= link_to planet.planet, planet %>
+    <% end %>
+  <% else %>
+    <div>Only has 1 planet </div>
   <% end %>
-  <%# <% else %>
-  <%# <div>Only has 1 planet </div> %>
 </p>
 
 <%= link_to 'Home', root_path %> |
