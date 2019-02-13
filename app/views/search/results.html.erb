@@ -2,3 +2,11 @@
 
 <h2>Your search results for "<%= @query %>" returned <%= pluralize(@guides.size, 'result') %>.</h2>
 
+ <% @guides.each do |guide| %>
+      <tr>
+        <td><%= guide.character %></td>
+        <td><%= guide.specie %></td>
+        <td><%= guide.quote %></td>
+        <td><%= guide.planet.planet %></td>
+      </tr>
+    <% end %>
