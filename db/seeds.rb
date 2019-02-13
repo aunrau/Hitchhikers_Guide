@@ -12,8 +12,8 @@ Planet.destroy_all
 end
 =end
 20.times do
-  planet = Planet.create(planet: Faker::Movies::HitchhikersGuideToTheGalaxy.unique.planet,
-                        location: Faker::Movies::HitchhikersGuideToTheGalaxy.location)
+  Planet.create(planet: Faker::Movies::HitchhikersGuideToTheGalaxy.unique.planet,
+                location: Faker::Movies::HitchhikersGuideToTheGalaxy.location)
 end
 
 200.times do
@@ -21,10 +21,10 @@ end
   planet = Planet.offset(offset).first
 
   guide = Guide.new(character: Faker::Movies::HitchhikersGuideToTheGalaxy.character,
-    specie: Faker::Movies::HitchhikersGuideToTheGalaxy.specie,
-    quote: Faker::Movies::HitchhikersGuideToTheGalaxy.quote)
+                    specie: Faker::Movies::HitchhikersGuideToTheGalaxy.specie,
+                    quote: Faker::Movies::HitchhikersGuideToTheGalaxy.quote)
 
-    planet.guides << guide
+  planet.guides << guide
 end
 
 puts "All the Planets: #{Planet.count}"

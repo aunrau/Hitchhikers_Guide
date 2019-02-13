@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Guides</h1>
+<%= link_to 'Characters', guides_path %>
+<%= link_to 'Planets', planets_path %>
+<%= link_to 'Home', root_path %>
+
+<h1>All Characters</h1>
 
 <table>
   <thead>
@@ -29,5 +33,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Guide', new_guide_path %>

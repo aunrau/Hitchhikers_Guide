@@ -62,13 +62,14 @@ class GuidesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_guide
-      @guide = Guide.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def guide_params
-      params.require(:guide).permit(:character, :specie, :quote, :planet_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_guide
+    @guide = Guide.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def guide_params
+    params.require(:guide).permit(:character, :specie, :quote, :planet_id)
+  end
 end
