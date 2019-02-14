@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   get 'search_results', to: 'search#results', as: 'search_results'
   get "/pages/:page" => "pages#show"
-
-  root "pages#show", page: "about"
-  # root to: 'guides#index'
+  root to: "pages#about"
+  #root to: 'guides#index'
 end
