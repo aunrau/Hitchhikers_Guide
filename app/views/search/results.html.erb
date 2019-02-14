@@ -2,10 +2,23 @@
 
 <h2>Your search results for "<%= @query %>".</h2>
 
-
-<div class="guide">
-  <p><%= @guides.character %></p>
-  <p><%= guides.specie %></p>
-  <p><%= guides.quote %></p>
-  <p><%= guides.planet.planet %></p>
-</div>
+<div class="row firstDiv">
+    <div class="col-sm-8 list-group-item list-group-item-action list-group-item-info a">Title</div>
+    <%# <div class="col-sm-4 abstract"></div> %>
+  </div>
+  <div class="row">
+    <div class="col-sm item"><%= guide.character %></div>
+  </div>
+<table>
+ <% @guides.each do |guide| %>
+ <div class="row">
+    <div class="col-sm item"><%= guide.character %></div>
+  </div>
+      <tr>
+        <td><%= guide.character %></td>
+        <td><%= guide.specie %></td>
+        <td><%= guide.quote %></td>
+        <td><%= guide.planet.planet %></td>
+      </tr>
+    <% end %>
+</table>
