@@ -1,12 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<ul class="nav justify-content-end">
+  <li class="nav-item">
 <%= link_to 'Characters', guides_path %> |
 <%= link_to 'Planets', planets_path %> |
 <%= link_to 'Home', root_path %>
+</li>
+</ul>
 
-<h1>All Characters</h1>
+<div class="page-header">
+  <h1>All Characters</h1>
+</div>
 
-<table>
+<div class="container">
+<table class="table-striped">
   <thead>
     <tr>
       <th>Character</th>
@@ -23,10 +30,11 @@
         <td><%= guide.specie %></td>
         <td><%= guide.quote %></td>
         <td><%= guide.planet.planet %></td>
-        <td><%= link_to 'Show', guide %></td>
+        <td><%= link_to 'Show', guide, class: 'label label-info' %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
