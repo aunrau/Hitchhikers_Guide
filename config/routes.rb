@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :guides
 
   get 'search_results', to: 'search#results', as: 'search_results'
+  get "/pages/:page" => "pages#show"
 
-  root to: 'guides#index'
+  root "pages#show", page: "home"
+  # root to: 'guides#index'
 end
