@@ -4,7 +4,7 @@ class GuidesController < ApplicationController
   # GET /guides
   # GET /guides.json
   def index
-    @guides = Guide.order(:planet_id)
+    @guides = Guide.order(:planet_id).page(params[:page])
   end
 
   # GET /guides/1
