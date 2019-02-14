@@ -1,12 +1,11 @@
 <h1>Search Results</h1>
 
-<h2>Your search results for "<%= @query %>" returned <%= pluralize(@guides.size, 'result') %>.</h2>
+<h2>Your search results for "<%= @query %>".</h2>
 
- <% @guides.each do |guide| %>
-      <tr>
-        <td><%= guide.character %></td>
-        <td><%= guide.specie %></td>
-        <td><%= guide.quote %></td>
-        <td><%= guide.planet.planet %></td>
-      </tr>
-    <% end %>
+
+<div class="guide">
+  <p><%= @guides.character %></p>
+  <p><%= guides.specie %></p>
+  <p><%= guides.quote %></p>
+  <p><%= guides.planet.planet %></p>
+</div>
